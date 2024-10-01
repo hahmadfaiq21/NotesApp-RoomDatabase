@@ -1,4 +1,8 @@
 ﻿# NotesApp Using Room Database
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/676209a6-01c5-40a9-93e7-34c907b77ef8">
+</p>
+
 Room is a persistence library that’s part of Android Jetpack. It provides an abstraction layer over SQLite, making it easier to work with databases in Android apps. Room simplifies database operations by offering a more fluent and type-safe API, reducing boilerplate code and ensuring compile-time verification of SQL queries. See more: <br>
 https://developer.android.com/training/data-storage/room
 
