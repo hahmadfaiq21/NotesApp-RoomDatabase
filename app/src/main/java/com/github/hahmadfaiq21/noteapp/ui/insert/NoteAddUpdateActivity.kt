@@ -49,7 +49,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         val btnTitle: String
 
         if (isEdit) {
-            actionBarTitle = getString(R.string.change)
+            actionBarTitle = getString(R.string.edit)
             btnTitle = getString(R.string.update)
             if (note != null) {
                 note?.let { note ->
