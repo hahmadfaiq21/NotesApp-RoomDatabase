@@ -15,7 +15,7 @@ import com.github.hahmadfaiq21.noteapp.helper.DateHelper
 import com.github.hahmadfaiq21.noteapp.helper.ViewModelFactory
 
 @Suppress("DEPRECATION")
-class NoteAddUpdateActivity : AppCompatActivity() {
+class AddUpdateNoteActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_NOTE = "extra_note"
@@ -25,7 +25,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
 
     private var isEdit = false
     private var note: Note? = null
-    private lateinit var noteAddUpdateViewModel: NoteAddUpdateViewModel
+    private lateinit var addUpdateNoteViewModel: AddUpdateNoteViewModel
 
     private var _activityNoteAddUpdateBinding: ActivityNoteAddUpdateBinding? = null
     private val binding get() = _activityNoteAddUpdateBinding
@@ -36,7 +36,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         _activityNoteAddUpdateBinding = ActivityNoteAddUpdateBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        noteAddUpdateViewModel = obtainViewModel(this@NoteAddUpdateActivity)
+        addUpdateNoteViewModel = obtainViewModel(this@AddUpdateNoteActivity)
 
         note = intent.getParcelableExtra(EXTRA_NOTE)
         if (note != null) {
@@ -84,13 +84,13 @@ class NoteAddUpdateActivity : AppCompatActivity() {
                         note?.description = description
                     }
                     if (isEdit) {
-                        noteAddUpdateViewModel.update(note as Note)
+                        addUpdateNoteViewModel.update(note as Note)
                         showToast(getString(R.string.changed))
                     } else {
                         note.let { note ->
                             note?.date = DateHelper.getCurrentDate()
                         }
-                        noteAddUpdateViewModel.insert(note as Note)
+                        addUpdateNoteViewModel.insert(note as Note)
                         showToast(getString(R.string.added))
                     }
                     finish()
@@ -142,7 +142,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
             setCancelable(false)
             setPositiveButton(getString(R.string.yes)) { _, _ ->
                 if (!isDialogClose) {
-                    noteAddUpdateViewModel.delete(note as Note)
+                    addUpdateNoteViewModel.delete(note as Note)
                     showToast(getString(R.string.deleted))
                 }
                 finish()
@@ -158,8 +158,8 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         _activityNoteAddUpdateBinding = null
     }
 
-    private fun obtainViewModel(activity: AppCompatActivity): NoteAddUpdateViewModel {
+    private fun obtainViewModel(activity: AppCompatActivity): AddUpdateNoteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProvider(activity, factory)[NoteAddUpdateViewModel::class.java]
+        return ViewModelProvider(activity, factory)[AddUpdateNoteViewModel::class.java]
     }
 }

@@ -3,7 +3,7 @@ package com.github.hahmadfaiq21.noteapp.helper
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.github.hahmadfaiq21.noteapp.ui.insert.NoteAddUpdateViewModel
+import com.github.hahmadfaiq21.noteapp.ui.insert.AddUpdateNoteViewModel
 import com.github.hahmadfaiq21.noteapp.ui.main.MainViewModel
 
 class ViewModelFactory private constructor(private val mApplication: Application) :
@@ -28,8 +28,8 @@ class ViewModelFactory private constructor(private val mApplication: Application
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return MainViewModel(mApplication) as T
-        } else if (modelClass.isAssignableFrom(NoteAddUpdateViewModel::class.java)) {
-            return NoteAddUpdateViewModel(mApplication) as T
+        } else if (modelClass.isAssignableFrom(AddUpdateNoteViewModel::class.java)) {
+            return AddUpdateNoteViewModel(mApplication) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
     }

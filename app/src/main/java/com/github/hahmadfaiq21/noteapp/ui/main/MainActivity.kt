@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.hahmadfaiq21.noteapp.databinding.ActivityMainBinding
 import com.github.hahmadfaiq21.noteapp.helper.ViewModelFactory
 import com.github.hahmadfaiq21.noteapp.ui.adapter.NoteAdapter
-import com.github.hahmadfaiq21.noteapp.ui.insert.NoteAddUpdateActivity
+import com.github.hahmadfaiq21.noteapp.ui.insert.AddUpdateNoteActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         binding?.rvNotes?.adapter = adapter
 
         binding?.fabAdd?.setOnClickListener {
-            val intent = Intent(this@MainActivity, NoteAddUpdateActivity::class.java)
+            val intent = Intent(this@MainActivity, AddUpdateNoteActivity::class.java)
             startActivity(intent)
         }
     }

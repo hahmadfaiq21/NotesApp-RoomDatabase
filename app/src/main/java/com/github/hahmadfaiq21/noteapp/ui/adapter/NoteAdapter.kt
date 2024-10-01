@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.hahmadfaiq21.noteapp.database.Note
 import com.github.hahmadfaiq21.noteapp.databinding.ItemNoteBinding
 import com.github.hahmadfaiq21.noteapp.helper.NoteDiffCallback
-import com.github.hahmadfaiq21.noteapp.ui.insert.NoteAddUpdateActivity
+import com.github.hahmadfaiq21.noteapp.ui.insert.AddUpdateNoteActivity
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     private val listNotes = ArrayList<Note>()
@@ -41,8 +41,8 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
                 tvItemDate.text = note.date
                 tvItemDescription.text = note.description
                 cvItemNote.setOnClickListener {
-                    val intent = Intent(it.context, NoteAddUpdateActivity::class.java)
-                    intent.putExtra(NoteAddUpdateActivity.EXTRA_NOTE, note)
+                    val intent = Intent(it.context, AddUpdateNoteActivity::class.java)
+                    intent.putExtra(AddUpdateNoteActivity.EXTRA_NOTE, note)
                     it.context.startActivity(intent)
                 }
             }

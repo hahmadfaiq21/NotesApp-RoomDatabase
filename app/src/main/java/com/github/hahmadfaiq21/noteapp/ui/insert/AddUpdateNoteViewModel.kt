@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.github.hahmadfaiq21.noteapp.database.Note
 import com.github.hahmadfaiq21.noteapp.repository.NoteRepository
 
-class NoteAddUpdateViewModel(application: Application) : ViewModel() {
+class AddUpdateNoteViewModel(application: Application) : ViewModel() {
 
     private val mNoteRepository: NoteRepository = NoteRepository(application)
 
