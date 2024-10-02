@@ -50,6 +50,3 @@ Room makes it easier to manage local data storage in Android apps, ensuring data
 <p align="center">
   <img src="https://github.com/user-attachments/assets/04615dba-2dbe-4e37-9300-e2e39f9c7ac0">
 </p>
-
-# Summary
-Room offers several advantages over SQLite, including compile-time verification, ORM support, type safety, easier integration with other libraries, simplified database migrations, and more maintainable query building. These features make Room a more developer-friendly choice for managing local databases in Android apps.
