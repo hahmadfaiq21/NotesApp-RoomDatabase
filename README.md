@@ -44,7 +44,7 @@ https://developer.android.com/training/data-storage/room
 1. **Compile-time Verification**: Room verifies SQL queries at compile time, reducing runtime errors. <br>
 2. **Reduced Boilerplate Code**: Room uses annotations to minimize repetitive code. <br>
 3. **Easy Integration**: Room integrates seamlessly with other Jetpack components like LiveData, ViewModel, and Paging. <br>
-Room makes it easier to manage local data storage in Android apps, ensuring data consistency and reducing the likelihood of errors.
+4. **Data consistency**: Room makes it easier to manage local data storage in Android apps, ensuring data consistency and reducing the likelihood of errors.
 
 # Notes App Interfaces
 <p align="center">
