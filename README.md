@@ -7,9 +7,9 @@ Room is a persistence library that’s part of Android Jetpack. It provides an a
 https://developer.android.com/training/data-storage/room
 
 # Components of Room Database
-1. **Database Class**: This class holds the database and serves as the main access point for the underlying connection to your app’s persisted data. It is annotated with **@Database** and must extend RoomDatabase. <br>
-2. **Entities**: These are data classes annotated with @Entity that represent tables in your database. Each field in the entity corresponds to a column in the table. <br>
-3. **Data Access Objects (DAOs)**: These are interfaces or abstract classes annotated with **@Dao**. They define methods for interacting with the database, such as querying, inserting, updating, and deleting data. <br>
+**1. Database Class**: This class holds the database and serves as the main access point for the underlying connection to your app’s persisted data. It is annotated with **@Database** and must extend RoomDatabase. <br>
+**2. Entities**: These are data classes annotated with @Entity that represent tables in your database. Each field in the entity corresponds to a column in the table. <br>
+**3. Data Access Objects (DAOs)**: These are interfaces or abstract classes annotated with **@Dao**. They define methods for interacting with the database, such as querying, inserting, updating, and deleting data. <br>
 
 # Room vs. SQLite
 **1. Abstraction and Ease of Use** <br>
