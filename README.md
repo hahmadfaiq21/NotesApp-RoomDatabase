@@ -1,4 +1,4 @@
-﻿# NotesApp Using Room Database
+﻿# Notes App Using Room Database
 <p align="center">
   <img src="https://github.com/user-attachments/assets/676209a6-01c5-40a9-93e7-34c907b77ef8">
 </p>
